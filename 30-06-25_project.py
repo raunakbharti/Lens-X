@@ -60,9 +60,9 @@ with tab1:
     if st.button("Check for Spam"):
         pred=spam_model.predict([msg])
         if pred[0]==0:
-            st.image("D:/spam.jpg",width=300)
+            st.image("spam.jpg",width=300)
         else:
-            st.image("D:/not_spam.jpg",width=300)
+            st.image("not_spam.jpg",width=300)
 
     uploaded_file=st.file_uploader("upload file containing bulk msg",type=["csv","txt"])
     
@@ -115,9 +115,9 @@ with tab3:
     if st.button("Analyze Sentiment"):
         pred = review_model.predict([review_msg])
         if pred[0] == 1:
-            st.image("D:/like.png",width=300)
+            st.image("like.png",width=300)
         else:
-            st.image("D:/dislike.png",width=300)
+            st.image("dislike.png",width=300)
 
     # Bulk reviews prediction
     uploaded_review_file = st.file_uploader("Upload CSV file containing bulk reviews", type=["csv", "txt"], key="review_upload")
@@ -139,7 +139,7 @@ with tab4:
         </p>
     </div>
     """, unsafe_allow_html=True)
-    st.image("D:/under_construction.png", width=300)
+    st.image("under_construction.png", width=300)
 
 with tab5:
     st.header("🏦 Canara Bank Automation Portfolio")
@@ -147,7 +147,7 @@ with tab5:
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        st.image("D:/canara_bank_logo_2.png", width=250) 
+        st.image("canara_bank_logo_2.png", width=250) 
 
     with col2:
         st.markdown("""
@@ -253,7 +253,7 @@ if uploaded_file:
             st.warning("⚠️ Please train the model first.")
 
 
-st.sidebar.image("D:/image.png")
+st.sidebar.image("image.png")
 with st.sidebar.expander("🧑‍💼👩‍💼About us"):
     st.write("We are a group of students trying to understand the concept of NLP")
 with st.sidebar.expander("📞Contact us"):
